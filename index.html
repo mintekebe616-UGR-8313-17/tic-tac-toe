@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Solo or Duo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">🎮 Tic Tac Toe - Solo or Duo</h1>
+
+        <div class="mode-selection">
+            <button id="singlePlayerBtn" class="mode-btn single">🎯 Single Player</button>
+            <button id="twoPlayerBtn" class="mode-btn duo">👥 Two Player</button>
+        </div>
+
+        <div class="player-inputs hidden" id="playerInputs">
+            <div class="input-group">
+                <label for="playerX">Player X Name:</label>
+                <input type="text" id="playerX" placeholder="Enter name" value="Player 1">
+            </div>
+            <div class="input-group">
+                <label for="playerO">Player O Name:</label>
+                <input type="text" id="playerO" placeholder="Enter name" value="Player 2">
+            </div>
+            <button id="startGameBtn" class="start-btn">Start Game</button>
+        </div>
+
+        <div class="score-board hidden" id="scoreBoard">
+            <div class="score-card">
+                <span class="player-name" id="scoreXName">Player X</span>
+                <span class="score" id="scoreX">0</span>
+            </div>
+            <div class="score-divider">VS</div>
+            <div class="score-card">
+                <span class="player-name" id="scoreOName">Player O</span>
+                <span class="score" id="scoreO">0</span>
+            </div>
+        </div>
+
+        <div class="game-board hidden" id="gameBoard">
+            <div class="turn-indicator" id="turnIndicator">
+                <span id="currentTurnText">Player X's turn</span>
+            </div>
+            
+            <div class="board-grid" id="board"></div>
+
+            <div class="game-controls">
+                <button id="restartRoundBtn" class="control-btn">Restart Round</button>
+                <button id="resetGameBtn" class="control-btn">New Game</button>
+            </div>
+        </div>
+
+        <div class="modal hidden" id="gameOverModal">
+            <div class="modal-content">
+                <h2 id="gameOverMessage">Game Over!</h2>
+                <button id="playAgainBtn" class="modal-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
